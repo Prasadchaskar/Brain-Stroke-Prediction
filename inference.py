@@ -12,7 +12,7 @@ def predict(df):
         'smoking_status']]
 
         numpy_array = df.to_numpy()
-        numpy_array = scalr.transform(numpy_array)
+        numpy_array = scalr.fit_transform(numpy_array)
         # Predict
         predictions = model.predict(numpy_array)
         #return str(predictions)
