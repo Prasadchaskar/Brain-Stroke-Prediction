@@ -8,7 +8,7 @@ encode2 = pickle.load(open('marlbl.pkl', 'rb'))
 encode3 = pickle.load(open('worklbl.pkl', 'rb'))
 encode4 = pickle.load(open('reslbl.pkl', 'rb'))
 encode5 = pickle.load(open('smoklbl.pkl', 'rb'))
-class_names = ['Yes','No']
+class_names = ['No','Yes']
 def predict(df):
         df = df[['gender', 'age', 'hypertension', 'heart_disease', 'ever_married','work_type', 'Residence_type', 'avg_glucose_level', 'bmi','smoking_status']]
         df.gender = encode1.transform(df.gender)
